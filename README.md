@@ -10,7 +10,7 @@ I built a responsive three-column preview card component using semantic HTML and
 - Gained more confidence debugging layout and selector issues.
 
 ## Project
-- Live Site URL: 
+- Live Site URL: https://daxitaseervi.github.io/3-column-preview-card/
 ![Project Screenshot](images/project-screenshot.png)
 
 ## Links
