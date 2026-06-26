@@ -2,8 +2,9 @@
   --gold-500: hsl(31, 77%, 52%);
   --cyan-800: hsl(184, 100%, 22%);
   --green-950: hsl(179, 100%, 13%);
+  --white: hsl(0, 0%, 100%);
   /* paragraphs */
-  --white: hsla(0, 0%, 100%, 0.75);
+  --para-white: hsla(0, 0%, 100%, 0.75);
   /* (background, headings, buttons) */
   --gray-100 : hsl(0, 0%, 95%);
 
@@ -31,7 +32,7 @@ body {
   justify-content: center;
   padding: 20px;
   font-family: var(--primary-font);
-  color: var(--white);
+  color: var(--para-white);
 }
 
 .container {
@@ -45,6 +46,7 @@ body {
   flex-direction: column;
   gap: 5rem;
   max-width: 280px;
+  min-width: 200px;
   padding: 40px;
 }
 
@@ -86,8 +88,11 @@ body {
   align-self: flex-start;
   border: none;
   border-radius: 50px;
+  border: 2px solid transparent;
   padding: 10px 20px;
   font-weight: var(--secondary-weight);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border 0.15s;
 }
 
 .card:nth-child(1) .card__btn  {
@@ -100,6 +105,29 @@ body {
 
 .card:last-child .card__btn  {
   color: var(--green-950);
+}
+
+.card:nth-child(1) .card__btn:hover,
+.card:nth-child(2) .card__btn:hover,
+.card:last-child .card__btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 760px;
+    gap: 2rem;
+  }
+
+  .card__info {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 475px) {
